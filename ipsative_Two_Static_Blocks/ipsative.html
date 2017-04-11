@@ -1,0 +1,27 @@
+{{paragraph}}
+<table class="questionnaire-response-table" id="upperTable" ng-controller="questionnaire">
+	<tbody>
+		<tr>
+			<th class="questionnaire-header-cell">&nbsp;</th>
+			<th class="questionnaire-header-cell" ng-bind-html="option.label" ng-repeat="option in responseOptions">&nbsp;</th>
+		</tr>
+		<tr ng-class="{'validationHighlight': question.noAnswer}" ng-repeat="question  in questionsBlockOne">
+			<td class="questionnaireQuestionCell" ng-bind-html="question.question">&nbsp;</td>
+			<td class="questionnaire-response-cell" ng-repeat="option in responseOptions"><input name="q[[question.id]]" ng-click="ipsetiveButtonChecker(question.id,option.value,'upperTable')" ng-model="question.answer" type="radio" value="[[option.value]]" /></td>
+		</tr>
+	</tbody>
+</table>
+{{paragraph}}
+
+<table class="questionnaire-response-table" id="lowerTable" ng-controller="questionnaire">
+	<tbody>
+		<tr>
+			<th class="questionnaire-header-cell">&nbsp;</th>
+			<th class="questionnaire-header-cell" ng-bind-html="option.label" ng-repeat="option in responseOptions">&nbsp;</th>
+		</tr>
+		<tr ng-class="{'validationHighlight': question.noAnswer}" ng-repeat="question in questionsBlockTwo">
+			<td class="questionnaireQuestionCell" ng-bind-html="question.question">&nbsp;</td>
+			<td class="questionnaire-response-cell" ng-repeat="option in responseOptions"><input name="q[[question.id]]" ng-click="ipsetiveButtonChecker(question.id,option.value,'lowerTable')" ng-model="question.answer" type="radio" value="[[option.value]]" /></td>
+		</tr>
+	</tbody>
+</table>

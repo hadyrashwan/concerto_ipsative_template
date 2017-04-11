@@ -1,0 +1,19 @@
+.questionnaire-response-cell {
+  width: 12%;
+  text-align: center;
+  border-left: 1px solid #d1d1d1;
+}
+.questionnaire-header-cell {
+  text-align: center;
+  background-color: #b9d979;
+  font-weight: 500;
+}
+.questionnaire-response-table {
+  border: 1px solid #d1d1d1;
+  margin-top: 20px;
+}
+.questionnaire-response-table tr:nth-child(even) {
+  background-color: #f1e1ed;
+}
+.questionnaire-response-table tr:nth-child(odd) {
+}
