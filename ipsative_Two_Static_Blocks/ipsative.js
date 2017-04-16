@@ -1,8 +1,8 @@
 testRunner.controllerProvider.register("questionnaire", function($scope) {
   $scope.responseOptions = {{options}};
   $scope.questions = {{questions}}
-  var questionsOverTwo=($scope.questions.length/2)+1 ;
-  $scope.questionsBlockOne=$scope.questions.slice(1,questionsOverTwo);
+  var questionsOverTwo=($scope.questions.length/2) ;
+  $scope.questionsBlockOne=$scope.questions.slice(0,questionsOverTwo);
   $scope.questionsBlockTwo=$scope.questions.slice(questionsOverTwo,$scope.questions.length);
 // ipsative function here
 $scope.ipsetiveButtonChecker = function(ipsetiveQuestionID, ipsetiveQuestionAnswer,tableQuestionID) {
