@@ -6,7 +6,7 @@ $scope.questions.forEach(function(item, index, itemsArray) {
         numberOfAnswers = numberOfAnswers + 1
 
 })
-if(numberOfAnswers<numberOfTables*2){
+if(numberOfAnswers!=numberOfTables*2){ //TODO to be changed to number of responses instead of just 2
 // prevent the next question
 
 }
