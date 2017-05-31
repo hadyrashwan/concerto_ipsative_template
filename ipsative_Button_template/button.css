@@ -1,0 +1,29 @@
+.button-group {
+  width: 100%;
+  display: table;
+  table-layout: fixed;
+}
+.button-group ul {
+  display: table-row;
+}
+button {
+  background-color: #bebebe;
+  border: 0 none;
+  color: #000000;
+  font-family: "Roboto";
+  font-size: 1.1em;
+  font-style: normal;
+  font-weight: 500;
+  padding: 7px;
+}
+button[disabled]{
+	background-color:#7e7e7e;
+}
+.button-group li {
+  display: table-cell;
+  text-align: center;
+  padding: 5px;
+}
+.button-group li button {
+  width: 100%;
+}
