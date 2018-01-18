@@ -17,9 +17,11 @@ testRunner.controllerProvider.register("questionnaire", function($scope) {
     document.getElementsByName("next")[0].disabled = false // open the button
 
   }
-
+  // if condition for the loop if itrator = 0
   $scope.questionsBlockOne=$scope.questions.slice(0,questionsOverTwo);
+  //  * itrator  ,  * itator +1
   $scope.questionsBlockTwo=$scope.questions.slice(questionsOverTwo,questionsOverTwo*2); // only in number 3 
+  // if itrator equal to itrator = table length -1 
   $scope.questionsBlockThree=$scope.questions.slice(questionsOverTwo*2,$scope.questions.length);
 
 // ipsative function here
