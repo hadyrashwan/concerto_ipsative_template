@@ -1,11 +1,11 @@
 testRunner.controllerProvider.register("questionnaire", function($scope) {
   $scope.responseOptions = {{options}};
   $scope.questions = {{questions}}
-  var questionsOverTwo=($scope.questions.length/3) ;
-  var splitNumber=3
+
+  var numberOfTables = document.getElementById('testContainer').getElementsByTagName('table').length // count the tables
+  var questionsOverTwo=($scope.questions.length/numberOfTables) ; // need to be dynamic
   var parentArray=[]
 
-    var numberOfTables = document.getElementById('testContainer').getElementsByTagName('table').length // count the tables
   var numberOfAnswers = 0 // set the counter of answers to zero at first 
   document.getElementsByName("next")[0].disabled = true // disable the next button at first
   $scope.questions.forEach(function(item, index, itemsArray) { // a for each to count the number of answers
@@ -17,9 +17,9 @@ testRunner.controllerProvider.register("questionnaire", function($scope) {
     document.getElementsByName("next")[0].disabled = false // open the button
 
   }
-  
+
   $scope.questionsBlockOne=$scope.questions.slice(0,questionsOverTwo);
-  $scope.questionsBlockTwo=$scope.questions.slice(questionsOverTwo,questionsOverTwo*2);
+  $scope.questionsBlockTwo=$scope.questions.slice(questionsOverTwo,questionsOverTwo*2); // only in number 3 
   $scope.questionsBlockThree=$scope.questions.slice(questionsOverTwo*2,$scope.questions.length);
 
 // ipsative function here
